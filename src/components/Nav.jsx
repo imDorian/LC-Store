@@ -1,14 +1,14 @@
 const Nav = () => {
     return (
-        <header className="w-full fixed top-10 left-0 z-50 transition-all duration-300">
-            <nav className="flex mx-10">
-                <div className="flex items-center justify-between  p-4 text-orange-500 w-full rounded-4xl px-10 gap-10">
-                    <div className="text-2xl font-bold text-nowrap">LC Store</div>
-                    <ul className="flex space-x-10 w-full justify-start m-0 p-0 text-2xl font-bold">
-                        <li><a href="#home" className="hover:text-gray-400">Home</a></li>
-                        <li><a href="#about" className="hover:text-gray-400">About</a></li>
-                        <li><a href="#services" className="hover:text-gray-400">Services</a></li>
-                        <li><a href="#contact" className="hover:text-gray-400">Contact</a></li>
+        <header className="w-full fixed top-0 left-0 z-1 transition-all duration-300 bg-gradient-to-r from-white from-40%   shadow-2xl  backdrop-blur-xl">
+            <nav className="flex mx-10 w-full">
+                <div className="flex items-center p-1 text-orange-400 rounded-4xl w-full gap-x-40">
+                    <img src="/logo.jpg" alt="logo lc camionero" className="w-[100px] object-contain" />
+                    <ul className="flex space-x-5 w-full italic justify-start items-center m-0 p-0 text-2xl font-bold cursive gap-x-10">
+                        <li><a href="#home" className="hover:text-orange-500 transition-all duration-300 ">Inicio</a></li>
+                        <li><a href="#about" className="hover:text-orange-500 transition-all duration-300">Tienda</a></li>
+                        <li><a href="#services" className="hover:text-orange-500 transition-all duration-300">Sobre mí</a></li>
+                        <li><a href="#contact" className="hover:text-orange-500 transition-all duration-300">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
