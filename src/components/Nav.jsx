@@ -36,7 +36,7 @@ const Nav = () => {
                             <span className='text-lg'>Cesta</span>
                             <ul className={isCart ? 'flex flex-col gap-2 rounded-xl p-2 text-sm w-full transition-all duration-300 my-4 overflow-hidden h-auto' : 'transition-all duration-300 h-0 overflow-hidden w-full opacity-0'}>
                                 <li className=' flex flex-row items-center  bg-linear-to-br from-amber-600 to-amber-400 rounded-xl justify-between w-full text-start px-2 py-2 transition-all duration-300 shadow-lg'>
-                                    <img src="public/logo.jpg" alt="" className='object-cover w-14 rounded-xl' />
+                                    <img src="/logo.jpg" alt="" className='object-cover w-14 rounded-xl' />
                                     <div className='flex flex-col items-start justify-center'>
                                         <span className='text-white'>Nombre del producto</span>
                                         <span className='text-white'>99,99€</span>
@@ -47,7 +47,7 @@ const Nav = () => {
                                     </div>
                                 </li>
                                 <li className=' flex flex-row items-center  bg-linear-to-br from-amber-600 to-amber-500 rounded-xl justify-between w-full text-start px-2 py-2 transition-all duration-300 shadow-lg'>
-                                    <img src="public/logo.jpg" alt="" className='object-cover w-14 rounded-xl' />
+                                    <img src="/logo.jpg" alt="" className='object-cover w-14 rounded-xl' />
                                     <div className='flex flex-col items-start justify-center'>
                                         <span className='text-white'>Nombre del producto</span>
                                         <span className='text-white'>99,99€</span>
@@ -58,7 +58,7 @@ const Nav = () => {
                                     </div>
                                 </li>
                                 <li className=' flex flex-row items-center  bg-linear-to-br from-neutral-200 to-neutral-400 rounded-xl justify-between w-full text-start px-2 py-2 transition-all duration-300 shadow-lg'>
-                                    <img src="public/logo.jpg" alt="" className='object-cover w-14 rounded-xl' />
+                                    <img src="/logo.jpg" alt="" className='object-cover w-14 rounded-xl' />
                                     <div className='flex flex-col items-start justify-center'>
                                         <span className='text-white'>Nombre del producto</span>
                                         <span className='text-white'>99,99€</span>
