@@ -32,6 +32,10 @@ const Nav = () => {
     //     setIsNav(false)
     //     setIsCart(false)
     // }
+    function onClickNav() {
+        setIsNav(false)
+        setIsCart(false)
+    }
 
 
     return (
@@ -55,10 +59,10 @@ const Nav = () => {
 
                         </div>
                         <ul className={isNav && !isCart ? "flex w-full flex-col italic justify-start items-end m-0 p-0 text-xl font-medium cursive mt-15 gap-3 mb-5 transition-all duration-300 h-auto overflow-auto " : "h-0 transition-all duration-300 overflow-hidden flex w-full flex-col italic justify-start items-end m-0 p-0  font-bold opacity-0 cursive mt-0 gap-3 mb-0 "}>
-                            <li><a href="#home" className="hover:text-orange-500 transition-all duration-300 ">Inicio</a></li>
-                            <li><a href="#about" className="hover:text-orange-500 transition-all duration-300">Tienda</a></li>
-                            <li><a href="#services" className="hover:text-orange-500 transition-all duration-300">Sobre mí</a></li>
-                            <li><a href="#contact" className="hover:text-orange-500 transition-all duration-300">Contacto</a></li>
+                            <li><a href="#home" className="hover:text-orange-500 transition-all duration-300 active:text-amber-400 ">Inicio</a></li>
+                            <li><a href="#shop" className="hover:text-orange-500 active:text-amber-400 transition-all duration-300">Tienda</a></li>
+                            <li><a href="#about" className="hover:text-orange-500 active:text-amber-400 transition-all duration-300">Sobre mí</a></li>
+                            <li><a href="#contact" className="hover:text-orange-500 active:text-amber-400 transition-all duration-300">Contacto</a></li>
                         </ul>
                         <Cart isNav={isNav} setIsNav={setIsNav} isCart={isCart} setIsCart={setIsNav} />
                     </div>
