@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useCartStore } from '../stores/useCartStore'
+import CloseIcon from '../../public/icons/CloseIcon'
 
 const Cart = ({ isCart }) => {
 
@@ -13,7 +14,7 @@ const Cart = ({ isCart }) => {
     useEffect(() => {
         updateTotalPrice()
         updateTotalItems()
-    }, [[products]])
+    }, [products])
 
     const handleQuantityChange = (productId, quantity) => {
         // Prevent negative quantities
@@ -46,14 +47,23 @@ const Cart = ({ isCart }) => {
                             </div>
                             <div className='flex flex-col items-center justify-center'>
                                 <span>Cantidad</span>
-                                <input onBlur={e => handleOnBlur(e)} type="tel" inputMode="numeric" pattern="[0-9]*" className='w-10 text-center rounded-lg' onChange={(e) => {
-                                    const value = e.target.value;
-                                    const numericValue = parseInt(value, 10);
-                                    handleQuantityChange(
-                                        product.id,
-                                        value === '' || isNaN(numericValue) ? '' : numericValue
-                                    );
-                                }} value={product.quantity} />
+                                <div className='flex flex-row items-center justify-center gap-2'>
+                                    <button className='rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 p-0 px-2' onClick={() => handleQuantityChange(product.id, product.quantity - 1)}>-</button>
+                                    <input onBlur={e => handleOnBlur(e)} type="tel" inputMode="numeric" pattern="[0-9]*" className='w-10 text-center rounded-lg border border-neutral-400 inset-shadow-sm inset-shadow-neutral-700 focus:outline-2 outline-amber-400' onChange={(e) => {
+                                        const value = e.target.value;
+                                        const numericValue = parseInt(value, 10);
+                                        handleQuantityChange(
+                                            product.id,
+                                            value === '' || isNaN(numericValue) ? '' : numericValue
+                                        );
+                                    }} value={product.quantity} />
+                                    <button className='rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 p-0 px-2' onClick={() => handleQuantityChange(product.id, product.quantity + 1)}>+</button>
+                                </div>
+                            </div>
+                            <div className='flex items-'>
+                                <button className='' onClick={() => handleRemoveProduct(product.id)}>
+                                    <CloseIcon className='size-5 text-neutral-100' />
+                                </button>
                             </div>
                         </li>
                     ))

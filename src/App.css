@@ -11,3 +11,7 @@ body {
 ul {
   scrollbar-width: none;
 }
+
+button {
+  cursor: pointer;
+}
