@@ -45,7 +45,7 @@ const Nav = () => {
 
                     <div className="w-full flex items-end justify-center text-end flex-col px-2 overflow-hidden transition-all duration-300">
                         <div className='w-full flex flex-row justify-between'>
-                            <img src="/logo.PNG" alt="logo lc camionero" className="w-[60px] object-contain" />
+                            <img src="/logo.PNG" alt="logo lc camionero" className="w-[50px] object-contain" />
                             <div className='flex flex-row justify-end gap-3 items-center'>
                                 <button onClick={handleCart} className='rounded-full p-2 focus:bg-gradient-to-r cursor-pointer focus:from-neutral-500 focus:to-neutral-600 transition-all duration-300    hover:shadow-[inset_0px_0px_45px_50px_rgba(0,_0,_0,_0.1)] inset-shadow-neutral-950 relative'>
                                     <CartIcon className="size-6" />
