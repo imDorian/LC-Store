@@ -34,9 +34,9 @@ const Cart = ({ isCart }) => {
 
 
     return (
-        <div className={isCart ? 'flex flex-col items-end justify-center h-auto transition-all duration-300 w-full mt-5' : 'h-0 transition-all duration-300 overflow-hidden'}>
-            <span className='text-lg'>Cesta</span>
-            <ul className={isCart ? 'flex flex-col gap-2 rounded-xl p-2 text-sm w-full transition-all duration-300 my-4 overflow-hidden h-auto divide-y-1 divide-neutral-200' : 'transition-all duration-300 h-0 overflow-hidden w-full opacity-0'}>
+        <div className={isCart ? 'flex flex-col items-end justify-center h-auto transition-all duration-300 w-full mt-5 ease-in-out' : 'h-0 transition-all duration-300 overflow-hidden ease-in-out w-full'}>
+            {/* <span className={isCart ? 'text-lg transition-all duration-300 h-auto' : 'h-0 transition-all duration-300'}>Cesta</span> */}
+            <ul className={isCart ? 'flex flex-col gap-2 rounded-xl p-2 text-sm w-full transition-all duration-300 my-4 overflow-hidden h-auto divide-y-1 divide-neutral-300' : 'transition-all duration-300 h-0 overflow-hidden w-full opacity-0 flex flex-col gap-2 rounded-xl  text-sm '}>
                 {
                     products.map((product) => (
                         <li key={product.id} className=' flex flex-row items-center  justify-between w-full text-start px-2 py-2 transition-all duration-300 '>
