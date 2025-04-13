@@ -28,7 +28,8 @@ const Cart = ({ isCart }) => {
     const handleOnBlur = (e) => {
         if (e.target.value === '') {
             e.target.value = 1
-        } else
+        }
+        else
             updateProducts()
     }
 
@@ -49,7 +50,7 @@ const Cart = ({ isCart }) => {
                                 <span>Cantidad</span>
                                 <div className='flex flex-row items-center justify-center gap-2'>
                                     <button className='rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 p-0 px-2' onClick={() => handleQuantityChange(product.id, product.quantity - 1)}>-</button>
-                                    <input onBlur={e => handleOnBlur(e)} type="tel" inputMode="numeric" pattern="[0-9]*" className='w-10 text-center rounded-lg border border-neutral-400 inset-shadow-sm inset-shadow-neutral-700 focus:outline-2 outline-amber-400' onChange={(e) => {
+                                    <input disabled onBlur={e => handleOnBlur(e)} type="tel" inputMode="numeric" pattern="[0-9]*" className='w-10 text-center rounded-lg border border-neutral-400 inset-shadow-sm inset-shadow-neutral-700 focus:outline-2 outline-amber-400' onChange={(e) => {
                                         const value = e.target.value;
                                         const numericValue = parseInt(value, 10);
                                         handleQuantityChange(
