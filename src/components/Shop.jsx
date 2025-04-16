@@ -1,4 +1,6 @@
 import React from 'react'
+import { addToCart } from '../utils/addToCart'
+import { useCartStore } from '../stores/useCartStore'
 
 const products = [
 
@@ -6,7 +8,8 @@ const products = [
         id: 1,
         name: 'Nomad Tumbler',
         href: '#',
-        price: '$35',
+        price: 35,
+        quantity: 1,
         imageSrc: '/TomaDecision.png',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
@@ -14,7 +17,8 @@ const products = [
         id: 2,
         name: 'Nomad Tumbler',
         href: '#',
-        price: '$35',
+        price: 35,
+        quantity: 1,
         imageSrc: '/TomaDecision.png',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
@@ -22,7 +26,8 @@ const products = [
         id: 3,
         name: 'Nomad Tumbler',
         href: '#',
-        price: '$35',
+        price: 35,
+        quantity: 1,
         imageSrc: '/TomaDecision.png',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
@@ -30,7 +35,8 @@ const products = [
         id: 4,
         name: 'Nomad Tumbler',
         href: '#',
-        price: '$35',
+        price: 35,
+        quantity: 1,
         imageSrc: '/TomaDecision.png',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
@@ -38,7 +44,8 @@ const products = [
         id: 5,
         name: 'Nomad Tumbler',
         href: '#',
-        price: '$35',
+        price: 35,
+        quantity: 1,
         imageSrc: '/TomaDecision.png',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
@@ -46,7 +53,8 @@ const products = [
         id: 6,
         name: 'Nomad Tumbler',
         href: '#',
-        price: '$35',
+        price: 35,
+        quantity: 1,
         imageSrc: '/TomaDecision.png',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
@@ -54,7 +62,8 @@ const products = [
         id: 7,
         name: 'Nomad Tumbler',
         href: '#',
-        price: '$35',
+        price: 35,
+        quantity: 1,
         imageSrc: '/TomaDecision.png',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
@@ -62,14 +71,23 @@ const products = [
         id: 8,
         name: 'Nomad Tumbler',
         href: '#',
-        price: '$35',
+        price: 35,
+        quantity: 1,
         imageSrc: '/TomaDecision.png',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
 
 ]
 
+
 function Shop() {
+    const { addProduct } = useCartStore((state) => state)
+
+    function addProductToCart(product) {
+        console.log(product)
+        addToCart(product)
+        addProduct(product)
+    }
     return (
         <div id='shop' className="bg-orange-400 p-5 flex flex-col items-center">
             <div className="flex flex-col  justify-center h-full w-full gap-4 md:max-w-7xl">
@@ -84,7 +102,7 @@ function Shop() {
                                 <h2 className='text-base'>{product.name}</h2>
                                 <p className=" text-sm text-white">{product.price}</p>
                             </div>
-                            <a href={product.href} className="text-base rounded-sm font-medium italic text-center p-1.5 text-white bg-gradient-to-br from-orange-600 to-orange-500  hover:from-orange-700 hover:to-orange-600 transition-all duration-300 ease-in-out w-full">Añadir al carrito</a>
+                            <a onClick={() => addProductToCart(product)} href={product.href} className="text-base rounded-sm font-medium italic text-center p-1.5 text-white bg-gradient-to-br from-orange-600 to-orange-500  hover:from-orange-700 hover:to-orange-600 transition-all duration-300 ease-in-out w-full">Añadir al carrito</a>
                         </div>
                     ))}
                 </div>
