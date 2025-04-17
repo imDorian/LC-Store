@@ -35,7 +35,7 @@ function App() {
 
 
   return (
-    <div className='h-screen snap-y overflow-y-auto snap-mandatory scroll-smooth layaut'>
+    <div className='h-screen snap-y overflow-y-auto snap-mandatory scroll-smooth layaut bg-gradient-to-b from-amber-400 from-50% to-neutral-400'>
       <Nav />
       <Slider />
       <Shop />

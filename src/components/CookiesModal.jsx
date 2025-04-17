@@ -15,7 +15,7 @@ const CookiesModal = () => {
             .catch(error => {
                 console.error('Error fetching cookies:', error)
             })
-        console.log('Cookies:', cookies)
+
     }, [])
 
     function setCookiesModal() {
