@@ -8,6 +8,12 @@ import Contact from './components/Contact'
 import CookiesModal from './components/CookiesModal'
 import { getCookies } from './utils/getCookies'
 import { useCartStore } from './stores/useCartStore'
+import Layaout from './components/Layaout'
+
+
+
+
+
 
 
 function App() {
@@ -35,18 +41,13 @@ function App() {
 
 
   return (
-    <div className='h-screen snap-y overflow-y-auto snap-mandatory scroll-smooth layaut bg-gradient-to-b from-amber-400 from-50% to-neutral-400'>
-      <Nav />
+    <Layaout>
       <Slider />
       <Shop />
       <About />
       <Contact />
-      <CookiesModal cookies={cookies} />
-      <footer className='bg-gray-900 text-white py-4 text-center text-xs'>
-        <p>&copy; 2025 LC Camionero. All rights reserved.</p>
-        <p>Privacy Policy | Terms of Service</p>
-      </footer>
-    </div>
+      <CookiesModal />
+    </Layaout >
   )
 }
 
