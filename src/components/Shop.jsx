@@ -90,7 +90,7 @@ function Shop() {
         addProduct(product)
     }
     return (
-        <div id='shop' className=" p-5 flex flex-col items-center">
+        <div id='shop' className=" p-5 flex flex-col items-center pt-18">
             <div className="flex flex-col  justify-center h-full w-full gap-4 md:max-w-7xl">
                 <h1 className='text-xl font-semibold text-white italic'>Mis productos favoritos</h1>
                 <div className='grid grid-cols-2 gap-4 md:grid-cols-4'>

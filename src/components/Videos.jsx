@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Videos = ({ src, aspect, ref, autoPlay, opacity, blur }) => {
+const Videos = ({ src, aspect, ref, autoPlay, opacity, blur, border }) => {
     return (
-        <video ref={ref} autoPlay={autoPlay} muted className={`object-center  ${aspect} ${opacity} ${blur} transition-all  duration-500 contrast-125 rounded-3xl shadow-lg shadow-black/50`}>
+        <video lazy ref={ref} autoPlay={autoPlay} muted className={`object-center object-cover  ${aspect} ${opacity} ${blur} transition-all  duration-500 contrast-125 ${border} rounded-3xl`}>
             <source src={src} type="video/mp4" />
         </video>
     )

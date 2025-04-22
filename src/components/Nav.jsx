@@ -39,7 +39,7 @@ const Nav = () => {
 
 
     return (
-        <header className="w-full fixed top-0 left-0 z-1 transition-all duration-300 bg-gradient-to-r  from-neutral-400  to-transparent from-30% shadow-2xl backdrop-blur-xl">
+        <header className={isNav || isCart ? "w-full fixed top-0  z-10 transition-all duration-300  backdrop-blur-xl bg-gradient-to-br from-neutral-400/40 to-neutral-500/80" : "w-full fixed top-0  z-10 transition-all duration-300  backdrop-blur-sm bg-transparent"}>
             <nav className="flex w-full">
                 <div className="flex items-start p-1 text-white-400 w-full transition-all duration-300 ">
 
