@@ -39,12 +39,12 @@ const Slider = () => {
     }, [])
 
     return (
-        <div id="home" className="w-full min-h-svh relative bg-[url('/road.png')] bg-center filter brightness-75 contrast-125 saturate-125">
+        <div id="home" className="w-full min-h-dvh relative bg-[url('/road.png')] bg-center filter brightness-75 contrast-125 saturate-125">
             {/* <video autoPlay muted className="object-cover object-center h-full w-full filter brightness-75 contrast-125 ">
                 <source src="/truck.mp4" type="video/mp4" />
             </video> */}
             <div className="absolute w-full h-full backdrop-blur-xs"></div>
-            <div className="absolute top-0 left-0 w-full h-full bg-black/10 flex flex-col items-center justify-center p-5 pt-[50px] gap-5">
+            <div className="absolute top-0 left-0 w-full h-full bg-black/10 flex flex-col items-center justify-start p-5 pt-[60px] gap-5">
                 <h1 className="text-2xl">Bienvenido <strong>Camionero</strong></h1>
 
                 <CardVideo videoPlaying={videoPlaying} link="https://www.youtube.com/watch?v=7N5wZmAvKsw" aspect="aspect-[16/9]" ref={youtubeRef} type={VIDEO_TYPES.YOUTUBE} videoSrc='/YT.mp4' imgSrc='https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png' gradient={videoPlaying !== VIDEO_TYPES.YOUTUBE ? 'bg-gradient-to-br from-red-500 to-red-400' : 'bg-transparent'} username={'@lc_camionero'} autoplay={true} scale={videoPlaying !== VIDEO_TYPES.YOUTUBE ? '' : 'scale-103'} />
