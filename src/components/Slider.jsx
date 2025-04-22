@@ -39,7 +39,7 @@ const Slider = () => {
     }, [])
 
     return (
-        <div id="home" className="w-full h-screen relative bg-[url('/road.png')] bg-center filter brightness-75 contrast-125 saturate-125">
+        <div id="home" className="w-full min-h-svh relative bg-[url('/road.png')] bg-center filter brightness-75 contrast-125 saturate-125">
             {/* <video autoPlay muted className="object-cover object-center h-full w-full filter brightness-75 contrast-125 ">
                 <source src="/truck.mp4" type="video/mp4" />
             </video> */}
