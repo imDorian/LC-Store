@@ -1,7 +1,14 @@
 import { getCookies } from "./getCookies"
 
 
-export const addToCart = async (product) => {
+export const addToCart = async (prod) => {
+    const product = {
+        id: prod.id,
+        title: prod.title,
+        price: prod.price,
+        quantity: 1,
+        image: prod.image,
+    }
     try {
         const cookies = await getCookies()
         function isProductInCart(productId) {

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { addToCart } from '../utils/addToCart'
 import { useCartStore } from '../stores/useCartStore'
 import Product from './Product'
+import { getProducts } from '../utils/getProducts'
 
 const products = [
 
@@ -83,6 +84,18 @@ const products = [
 
 function Shop() {
     const { addProduct } = useCartStore((state) => state)
+    const [products, setProducts] = React.useState([])
+
+    useEffect(() => {
+        getProducts()
+            .then((data) => {
+                setProducts(data)
+                console.log('Products:', data)
+            })
+            .catch((error) => {
+                console.error('Error fetching products:', error)
+            })
+    }, [])
 
     function addProductToCart(product) {
         console.log(product)
@@ -92,12 +105,11 @@ function Shop() {
     return (
         <div id='shop' className=" p-5 flex flex-col items-center pt-18">
             <div className="flex flex-col  justify-center h-full w-full gap-4 md:max-w-7xl">
-                <h1 className='text-xl font-semibold  italic'>Mis productos favoritos</h1>
-                <div className='grid grid-cols-2 gap-4 md:grid-cols-4'>
-                    {products.map((product) => {
-                        const price = (product.price / 100).toFixed(2)
+                <h1 className='text-xl font-semibold  italic'>Top Ventas</h1>
+                <div className='grid grid-cols-2 gap-5 md:grid-cols-4'>
+                    {products?.map((product) => {
                         return (
-                            <Product key={product.id} product={product} addProductToCart={addProductToCart} price={price} />
+                            <Product key={product.id} product={product} addProductToCart={addProductToCart} />
                         )
                     })}
                 </div>

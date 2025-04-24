@@ -54,13 +54,13 @@ const Cart = ({ isCart }) => {
             <ul className={isCart ? 'flex flex-col gap-2 rounded-xl p-2 text-sm w-full transition-all duration-300 my-4 overflow-hidden h-auto divide-y-1 divide-neutral-300' : 'transition-all duration-300 h-0 overflow-hidden w-full opacity-0 flex flex-col gap-2 rounded-xl  text-sm '}>
                 {
                     products.map((product) => {
-                        const price = (product.price / 100 * product.quantity).toFixed(2)
+                        const price = (product.price / 100 * product?.quantity).toFixed(2)
 
                         return (
                             <li key={product.id} className=' grid grid-cols-[1.5fr_3fr_3fr_0.5fr] text-start justify-items-start w-full py-2 transition-all duration-300 '>
                                 <img src="/logo-fondo.jpg" alt="" className='object-cover w-14 rounded-xl' />
                                 <div className='flex flex-col items-start justify-center'>
-                                    <span className='text-white'>{product.name}</span>
+                                    <span className='text-white'>{product.title}</span>
                                     <span className='text-white'>{price}€</span>
                                 </div>
                                 <div className='flex flex-col items-center justify-center text-white'>

@@ -7,6 +7,7 @@ export const getCookies = async () => {
             const newCookies = await createCookies()
             return newCookies
         }
+        console.log('Cookies found:', cookies)
         return cookies
 
     } catch (error) {
