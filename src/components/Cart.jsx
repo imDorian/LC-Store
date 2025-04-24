@@ -63,7 +63,7 @@ const Cart = ({ isCart }) => {
                                     <span className='text-white'>{product.name}</span>
                                     <span className='text-white'>{price}€</span>
                                 </div>
-                                <div className='flex flex-col items-center justify-center'>
+                                <div className='flex flex-col items-center justify-center text-white'>
                                     <span>Cantidad</span>
                                     <div className='flex flex-row items-center justify-center gap-2'>
                                         <button className='rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 p-0 px-2' onClick={() => subProduct(product)}>-</button>
@@ -88,7 +88,7 @@ const Cart = ({ isCart }) => {
                     })
                 }
 
-                <span className='flex flex-row w-full items-center justify-between mt-4 text-start transition-all duration-300'>
+                <span className='flex flex-row w-full items-center justify-between mt-4 text-start transition-all duration-300 text-white'>
                     <span className='text-base'>Subtotal <br />{totalPrice / 100}€</span>
                     <span className='text-base'>Productos <br />{totalItems}</span>
                     <button disabled={products.length === 0} className={products.length === 0 ? 'rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 p-2 opacity-50' : 'rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 p-2'}>Continuar</button>
