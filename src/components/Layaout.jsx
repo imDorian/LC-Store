@@ -3,9 +3,11 @@ import Nav from './Nav'
 
 const Layaout = ({ children }) => {
     return (
-        <div className='h-screen snap-y overflow-y-auto snap-mandatory scroll-smooth layaut '>
+        <div className='h-screen snap-y overflow-y-auto snap-mandatory scroll-smooth layaut'>
             <Nav />
-            {children}
+            <div className='flex flex-col items-center justify-center md:max-w-2xl md:mx-auto'>
+                {children}
+            </div>
             <footer className='py-4 text-center text-xs'>
                 <p>&copy; 2025 LC Camionero. All rights reserved.</p>
                 <p>Privacy Policy | Terms of Service</p>
