@@ -1,6 +1,5 @@
-import { use, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
-import Nav from './components/Nav'
 import Slider from './components/Slider'
 import About from './components/About'
 import Shop from './components/Shop'
@@ -8,7 +7,7 @@ import Contact from './components/Contact'
 import CookiesModal from './components/CookiesModal'
 import { getCookies } from './utils/getCookies'
 import { useCartStore } from './stores/useCartStore'
-import Layaout from './components/Layaout'
+import Layout from './components/Layout'
 
 
 
@@ -41,13 +40,13 @@ function App() {
 
 
   return (
-    <Layaout>
+    <Layout>
       <Slider />
       <Shop />
       <About />
       <Contact />
       <CookiesModal />
-    </Layaout >
+    </Layout >
   )
 }
 

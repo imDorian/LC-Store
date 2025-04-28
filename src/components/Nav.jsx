@@ -58,7 +58,7 @@ const Nav = () => {
                             </div>
 
                         </div>
-                        <ul className={isNav && !isCart ? "flex flex-col italic  sm:items-center sm:mx-auto items-end m-0 p-0 text-xl font-medium cursive mt-15 gap-3 mb-5 transition-all duration-300 h-auto overflow-auto text-white" : "h-0 opacity-0 transition-all duration-300 overflow-hidden flex w-full flex-col italic justify-start items-center m-0 p-0 sm:mx-auto font-bold  cursive mt-0 gap-3 mb-0 text-white"}>
+                        <ul className={isNav && !isCart ? "flex flex-col italic  sm:items-center sm:mx-auto items-end m-0 p-0 text-xl font-medium cursive mt-15 gap-3 mb-5 transition-all duration-300 h-auto overflow-auto text-white" : "h-0 opacity-0 transition-all duration-300 overflow-hidden flex flex-col italic  items-end m-0 p-0 sm:mx-auto font-bold  cursive mt-0 gap-3 mb-0 text-white"}>
                             <li><a href="#home" className="hover:text-orange-500 transition-all duration-300 active:text-amber-400 ">Inicio</a></li>
                             <li><a href="#shop" className="hover:text-orange-500 active:text-amber-400 transition-all duration-300">Tienda</a></li>
                             <li><a href="#about" className="hover:text-orange-500 active:text-amber-400 transition-all duration-300">Sobre mí</a></li>
