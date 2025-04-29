@@ -49,8 +49,8 @@ const Cart = ({ isCart }) => {
 
 
     return (
-        <div className={isCart ? 'flex flex-col items-end justify-center h-auto transition-all duration-300 sm:w-lg mt-5 mx-auto ease-in-out' : 'h-0 transition-all duration-300 overflow-hidden ease-in-out w-full sm:w-lg mx-auto'}>
-            {/* <span className={isCart ? 'text-lg transition-all duration-300 h-auto' : 'h-0 transition-all duration-300'}>Cesta</span> */}
+        <div className={isCart ? 'flex flex-col items-end justify-center h-auto transition-all duration-300 sm:w-lg mt-5 mx-auto ease-in-out w-full' : 'h-0 transition-all duration-300 overflow-hidden ease-in-out w-full sm:w-lg mx-auto'}>
+            <span className={isCart ? 'text-lg transition-all duration-300 h-auto text-white' : 'h-0 transition-all duration-300'}>Cesta</span>
             <ul className={isCart ? 'flex flex-col gap-2 rounded-xl p-2 text-sm w-full transition-all duration-300 my-4 overflow-hidden h-auto divide-y-1 divide-neutral-300' : 'transition-all duration-300 h-0 overflow-hidden w-full opacity-0 flex flex-col gap-2 rounded-xl  text-sm '}>
                 {
                     products.map((product) => {
@@ -67,7 +67,7 @@ const Cart = ({ isCart }) => {
                                     <span>Cantidad</span>
                                     <div className='flex flex-row items-center justify-center gap-2'>
                                         <button className='rounded-lg bg-gradient-to-r from-amber-600 to-amber-500 p-0 px-2' onClick={() => subProduct(product)}>-</button>
-                                        <input disabled onBlur={e => handleOnBlur(e)} type="tel" inputMode="numeric" pattern="[0-9]*" className='w-10 text-center rounded-lg border border-neutral-400 inset-shadow-sm inset-shadow-neutral-700 focus:outline-2 outline-amber-400' onChange={(e) => {
+                                        <input disabled name='quantity' onBlur={e => handleOnBlur(e)} type="tel" inputMode="numeric" pattern="[0-9]*" className='w-10 text-center rounded-lg border border-neutral-400 inset-shadow-sm inset-shadow-neutral-700 focus:outline-2 outline-amber-400' onChange={(e) => {
                                             const value = e.target.value;
                                             const numericValue = parseInt(value, 10);
                                             handleQuantityChange(

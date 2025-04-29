@@ -57,10 +57,10 @@ const Slider = () => {
                         <section className="h-full sm:h-auto flex flex-col gap-3 p-4 w-full bg-gradient-to-br from-red-500/80 to-orange-400/80 rounded-3xl  shadow-[2px_5px_30px_-20px] shadow-neutral-700">
                             <h2 className="text-lg font-semibold text-white">Tienda</h2>
                             <div className="flex flex-col gap-0 rounded-lg bg-white/20 p-1.5 ">
-                                <label className="flex flex-col items-center text-sm" htmlFor="">
-                                    <input placeholder="Tiras de led para cabina ..." className="bg-white rounded-lg p-1.5 w-full focus:outline-amber-500 overflow-ellipsis" type="search" name="" id="" />
+                                <div className="flex flex-col items-center text-sm" htmlFor="">
+                                    <input placeholder="Tiras de led para cabina ..." className="bg-white rounded-lg p-1.5 w-full focus:outline-amber-500 overflow-ellipsis" type="search" name="search" id="search" />
 
-                                </label>
+                                </div>
                                 <ul className="flex flex-col text-sm text-start divide-y-1 text-white divide-neutral-500/10 px-2">
                                     <a className="hover:text-violet-500 cursor-pointer transition-all duration-200 leading-none py-1">Accesorios para camiones...</a>
                                     <a className="hover:text-violet-500 cursor-pointer transition-all duration-200 leading-none py-1">Herramientas de viaje...</a>

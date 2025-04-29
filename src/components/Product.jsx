@@ -1,11 +1,12 @@
 import React from 'react'
 import AddButton from './AddButton'
+import { URL } from '../constants/URL'
 
 const Product = ({ product, addProductToCart }) => {
-    const { documentId: id, price, title, description, media } = product
+    const { id, price, title, description, media } = product
     const desc = description[0].children[0].text
     const priceDecimal = price / 100
-    const img = 'http://localhost:1337' + media[0].url
+    const img = URL + media[0].url
     // const images = media.map((image) => {
     //     return {
     //         id: image.id,

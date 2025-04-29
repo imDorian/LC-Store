@@ -34,8 +34,8 @@ const CookiesModal = () => {
     }
 
     return (
-        <dialog open={isOpen} className='fixed bottom-0'>
-            <div className='w-full bg-amber-100 p-4'>
+        <dialog open={isOpen} className=' sm:bottom-5 bottom-0 z-50 sm:mx-auto'>
+            <div className='w-full bg-amber-100 p-4 sm:rounded-2xl'>
                 <h3 className="text-lg font-semibold mb-2">🍪 Usamos cookies</h3>
                 <p className="text-sm text-gray-600 mb-4">
                     En <strong>LC Store</strong> utilizamos cookies para recordar tus datos y mejorar tu experiencia de compra.
