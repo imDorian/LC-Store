@@ -3,7 +3,7 @@ import { TOKEN } from "../constants/TOKEN"
 
 export async function getProducts() {
 
-    const response = await window.fetch(`${API_URL}products?populate=media`, {
+    const response = await window.fetch(`${API_URL}products?populate=image`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -12,5 +12,15 @@ export async function getProducts() {
 
     })
     const res = await response.json()
-    return res.data
+    const products = res.data.map((product) => {
+        return {
+            id: product.id,
+            title: product.title,
+            price: product.price,
+            description: product.description,
+            image: product.image.url,
+            quantity: 1,
+        }
+    })
+    return products
 }

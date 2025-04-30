@@ -2,12 +2,13 @@ import { getCookies } from "./getCookies"
 
 
 export const addToCart = async (prod) => {
+    console.log('Adding product to cart:', prod)
     const product = {
         id: prod.id,
         title: prod.title,
         price: prod.price,
         quantity: 1,
-        image: prod.image,
+        image: prod.image
     }
     try {
         const cookies = await getCookies()

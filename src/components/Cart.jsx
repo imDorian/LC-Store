@@ -55,10 +55,10 @@ const Cart = ({ isCart }) => {
                 {
                     products.map((product) => {
                         const price = (product.price / 100 * product?.quantity).toFixed(2)
-
+                        console.log(product)
                         return (
                             <li key={product.id} className=' grid grid-cols-[1.5fr_3fr_3fr_0.5fr] text-start justify-items-start w-full py-2 transition-all duration-300 '>
-                                <img src="/logo-fondo.jpg" alt="" className='object-cover w-14 rounded-xl' />
+                                <img src={product.image} alt="" className='object-cover w-14 rounded-xl' />
                                 <div className='flex flex-col items-start justify-center'>
                                     <span className='text-white'>{product.title}</span>
                                     <span className='text-white'>{price}€</span>
