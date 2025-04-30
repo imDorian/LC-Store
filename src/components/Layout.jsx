@@ -3,7 +3,7 @@ import Nav from './Nav'
 
 const Layaout = ({ children }) => {
     return (
-        <div className='h-screen snap-y overflow-y-auto snap-mandatory scroll-smooth'>
+        <div className='snap-y overflow-y-auto snap-mandatory scroll-smooth'>
 
             <Nav />
             <div className='flex flex-col items-center justify-center md:max-w-2xl md:mx-auto'>

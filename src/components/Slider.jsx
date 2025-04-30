@@ -38,7 +38,7 @@ const Slider = () => {
     }, [])
 
     return (
-        <div id="home" className="sm:w-xl min-h-sreen  max-h-screen h-screen flex flex-col items-center sm:p-10 p-3 mt-[60px]  my-auto">
+        <div id="home" className="sm:w-xl flex flex-col items-center sm:p-10 p-3 mt-[60px]  my-auto">
 
             <div className="flex flex-col justify-center h-min gap-3 w-full ">
                 <h1 className="text-xl text-center text-pretty">Tu espacio <strong>Camionero</strong>, en la carretera y en línea.</h1>
